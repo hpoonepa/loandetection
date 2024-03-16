@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Status Detector</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="loanlogo.png" width="60" height="60" class="d-inline-block align-top" alt="">
+            <span class="mx-auto display-5">LoanMonitor</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="firstscreen()">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="secondScreen()">Start Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <p class="lead">This tool helps you determine the likelihood of loan approval based on your personal and financial information. Simply fill in the details below to get an instant loan status prediction.</p>
+        <form id="loanForm">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="married">Married</label>
+                <select class="form-control" id="married">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="applicantIncome">Applicant Income</label>
+                <input type="number" class="form-control" id="applicantIncome">
+            </div>
+            <div class="form-group">
+                <label for="coapplicantIncome">Coapplicant Income</label>
+                <input type="number" class="form-control" id="coapplicantIncome">
+            </div>
+            <div class="form-group">
+                <label for="loanAmount">Loan Amount</label>
+                <input type="number" class="form-control" id="loanAmount">
+            </div>
+            <div class="form-group">
+                <label for="loanAmountTerm">Loan Amount Term</label>
+                <input type="number" class="form-control" id="loanAmountTerm">
+            </div>
+            <div class="form-group">
+                <label for="creditHistory">Credit History</label>
+                <select class="form-control" id="creditHistory">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="education">Education</label>
+                <select class="form-control" id="education">
+                    <option value="graduate">Graduate</option>
+                    <option value="not_graduate">Not Graduate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="selfEmployed">Self Employed</label>
+                <select class="form-control" id="selfEmployed">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <!-- Add other form inputs similarly -->
+
+            <button type="submit" class="btn btn-primary">Check Loan Status</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
